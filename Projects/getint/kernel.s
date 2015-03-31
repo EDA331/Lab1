@@ -356,7 +356,7 @@ __print_string:
 		jal     printf				# Call puts to print string in a0
 		nop
 
-		b		__ret
+		b		__ret 
 
 ###########################################################################
 # read_int (syscall 5): Reads an integer 

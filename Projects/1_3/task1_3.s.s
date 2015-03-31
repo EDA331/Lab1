@@ -3,7 +3,6 @@
 		.global	start
 		.ent	start
 start:	jal		main
-		syscall
 		.end	start
 		
 		.globl	main	

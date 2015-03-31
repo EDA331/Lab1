@@ -12,9 +12,9 @@ main:
 		sw		ra, 16(sp)		# save return address
 		li		a0, 0
 
-#
-# Put your program here
-#
+loop:	addi	a0, a0, 1		# a0 = a0 + 1
+		jal		print_number	# prints the number
+		b		loop			# loops forever
 
 main_ret:
 		lw		ra, 16(sp)		# restore return address
@@ -38,7 +38,7 @@ print_number:
 		sw		a0, 8(sp)		# save $a0
 		
 		# First, print number using syscall 1 (a0 already contains number)
-		li		v0, 1
+		li		v0, 100
 		syscall
 		
 		# Then print new line using syscall 4

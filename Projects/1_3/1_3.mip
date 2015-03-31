@@ -1,0 +1,13 @@
+1_3
+Z:\Lab1\Projects\1_3\
+Objects\
+0
+1
+minic
+0
+0
+0
+0
+1
+objcopy.exe -O srec 1_3.out 1_3.srec
+80020000 start
